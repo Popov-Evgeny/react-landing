@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useRef} from 'react';
 import styled from "styled-components";
 
 const Works = () => {
-    const [list, setList] = useState<string[]>([
+    const list = useRef<string[]>([
         'Web Design',
         'Development',
         'Illustration',
@@ -37,7 +37,7 @@ const Works = () => {
       gap: 20px;
     `;
 
-    const ListItem = styled.li`
+    const ListItem = styled.li<any>`
       font-size: 75px;
       font-weight: bold;
       cursor: pointer;
@@ -46,7 +46,9 @@ const Works = () => {
       position: relative;
 
       ::after {
-        content: "${(props) => props.text}";
+        content: "${(props) => {
+          return props.text;
+        }}";
         position: absolute;
         top: 0;
         left: 0;
@@ -79,7 +81,7 @@ const Works = () => {
             <Container>
                 <LeftSection>
                     <List>
-                        {list.map((item) => (
+                        {list.current.map((item) => (
                             <ListItem key={item} text={item}>{item}</ListItem>
                         ))}
                     </List>

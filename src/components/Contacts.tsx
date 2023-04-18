@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import Map from "./Map";
 
 const Contacts = () => {
 
@@ -80,7 +81,7 @@ const Contacts = () => {
                     </Form>
                 </LeftSection>
                 <RightSection>
-                    map
+                    <Map/>
                 </RightSection>
             </Container>
         </Section>
