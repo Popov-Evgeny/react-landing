@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import Hero from "./components/Hero";
+import Works from "./components/Works";
+import Contacts from "./components/Contacts";
+import About from "./components/About";
 
 function App() {
 
@@ -8,16 +12,20 @@ function App() {
       scroll-behavior: smooth;
       overflow-y: auto;
       scrollbar-width: none;
-      color: #000;
+      color: #fff;
+      background: url("../public/images/bg.jpeg");
 
       &::-webkit-scrollbar {
         display: none;
       }
-    `
+    `;
 
     return (
         <Container>
-            hello
+            <Hero/>
+            <About/>
+            <Works/>
+            <Contacts/>
         </Container>
     )
 }
