@@ -18,10 +18,21 @@ const Container = styled.div`
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1350px) {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const LeftSection = styled.div`
   flex: 1;
+  @media only screen and (max-width: 1350px) {
+    display: none;
+  }
 `;
 
 const RightSection = styled.div`
@@ -30,16 +41,27 @@ const RightSection = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media only screen and (max-width: 1350px) {
+    flex: 3;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 64px;
+
+  @media only screen and (max-width: 1350px) {
+    text-align: center;
+  }
 `;
 
 const SubtitleWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  
+  @media only screen and (max-width: 1350px) {
+    justify-content: center;
+  }
 `;
 
 const Line = styled.img`
@@ -53,6 +75,11 @@ const Subtitle = styled.h3`
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
+
+  @media only screen and (max-width: 1350px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`
@@ -63,6 +90,9 @@ const Button = styled.button`
   border-radius: 5px;
   padding: 10px;
   width: 150px;
+  @media only screen and (max-width: 1350px) {
+    margin: 0 auto;
+  }
 `;
 
 const About = () => {

@@ -11,6 +11,10 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 1350px) {
+    height: 120vh;
+  }
 `;
 
 const Container = styled.div`
@@ -20,6 +24,14 @@ const Container = styled.div`
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1350px) {
+    height: 70vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -28,15 +40,29 @@ const LeftSection = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  @media only screen and (max-width: 1350px) {
+    flex: 1;
+    align-items: center;
+  }
 `;
 
 const RightSection = styled.div`
   flex: 3;
   position: relative;
+
+  @media only screen and (max-width: 1350px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 64px;
+
+  @media only screen and (max-width: 1350px) {
+    text-align: center;
+  }
 `;
 
 const SubtitleWrapper = styled.div`
@@ -57,6 +83,11 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
 
+  @media only screen and (max-width: 1350px) {
+    width: 300px;
+    height: 300px;
+  }
+
   @keyframes animate {
     to {
       transform: translateY(20px);
@@ -75,6 +106,11 @@ const Subtitle = styled.h3`
 const Desc = styled.p`
   font-size: 20px;
   color: lightgray;
+
+  @media only screen and (max-width: 1350px) {
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 const Button = styled.button`

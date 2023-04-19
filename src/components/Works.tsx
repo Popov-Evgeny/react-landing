@@ -13,6 +13,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media only screen and (max-width: 1350px) {
+    height: 120vh;
+  }
 `;
 
 const Container = styled.div`
@@ -20,6 +24,14 @@ const Container = styled.div`
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1350px) {
+    height: 70vh;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -42,6 +54,11 @@ const ListItem = styled.li<any>`
   color: transparent;
   -webkit-text-stroke: 1px #fff;
   position: relative;
+
+  @media only screen and (max-width: 1350px) {
+    font-size: 55px;
+    text-align: center;
+  }
 
   ::after {
     content: "${(props) => {

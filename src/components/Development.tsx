@@ -15,12 +15,8 @@ const Desc = styled.div`
   right: 50px;
   color: #000;
 
-  @media only screen and (max-width: 768px) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  @media only screen and (max-width: 1350px) {
+    display: none;
   }
 `;
 

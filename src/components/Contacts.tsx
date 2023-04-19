@@ -8,6 +8,10 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 1350px) {
+    height: 70vh;
+  }
 `;
 
 const Container = styled.div`
@@ -17,6 +21,9 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  @media only screen and (max-width: 1350px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -24,6 +31,9 @@ const LeftSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media only screen and (max-width: 1350px) {
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h3`
@@ -36,6 +46,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 const Input = styled.input`
