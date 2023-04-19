@@ -1,5 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import styled from "styled-components";
+import Development from "./Development";
+import WebDesign from "./WebDesign";
+import ProductDesign from "./ProductDesign";
+import SocialMedia from "./SocialMedia";
+import Illustrations from "./Illustrations";
 
 
 const Section = styled.div`
@@ -7,6 +12,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -76,6 +82,7 @@ const Works = () => {
         'Product Design',
         'Social Media'
     ]);
+    const [work, setWork] = useState<string>("Web Design");
 
     return (
         <Section>
@@ -83,12 +90,22 @@ const Works = () => {
                 <LeftSection>
                     <List>
                         {list.current.map((item) => (
-                            <ListItem key={item} text={item}>{item}</ListItem>
+                            <ListItem key={item} text={item} onClick={() => setWork(item)}>{item}</ListItem>
                         ))}
                     </List>
                 </LeftSection>
                 <RightSection>
-                    icon
+                    {work === "Web Design" ? (
+                        <WebDesign/>
+                    ) : work === "Development" ? (
+                        <Development/>
+                    ) : work === "Product Design" ? (
+                        <ProductDesign/>
+                    ) : work === "Social Media" ? (
+                        <SocialMedia/>
+                    ) : (
+                        <Illustrations/>
+                    )}
                 </RightSection>
             </Container>
         </Section>
