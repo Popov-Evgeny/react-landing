@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import styled from "styled-components";
+import {OrbitControls} from "@react-three/drei";
+import {Canvas} from "@react-three/fiber";
+import Cube from "./Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -15,7 +18,6 @@ const Container = styled.div`
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const LeftSection = styled.div`
@@ -69,7 +71,14 @@ const About = () => {
         <Section>
             <Container>
                 <LeftSection>
-                    cube
+                    <Canvas camera={{position: [5, 5, 5], fov: 25}}>
+                        <Suspense fallback={null}>
+                            <ambientLight intensity={0.5}/>
+                            <directionalLight position={[3, 2, 1]}/>
+                            <Cube/>
+                            <OrbitControls enableZoom={false} autoRotate/>
+                        </Suspense>
+                    </Canvas>
                 </LeftSection>
                 <RightSection>
                     <Title>Lorem ipsum dolor sit amet, consectetur adipisicing..</Title>
