@@ -1,10 +1,10 @@
 import React, {useRef, useState} from 'react';
 import styled from "styled-components";
-import Development from "./Development";
-import WebDesign from "./WebDesign";
-import ProductDesign from "./ProductDesign";
-import SocialMedia from "./SocialMedia";
-import Illustrations from "./Illustrations";
+import Development from "../components/Development";
+import WebDesign from "../components/WebDesign";
+import ProductDesign from "../components/ProductDesign";
+import SocialMedia from "../components/SocialMedia";
+import Illustrations from "../components/Illustrations";
 
 
 const Section = styled.div`

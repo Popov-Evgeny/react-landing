@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import styled from "styled-components";
 import {OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
-import Cube from "./Cube";
+import Cube from "../components/Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -113,7 +113,7 @@ const About = () => {
                 <RightSection>
                     <Title>Lorem ipsum dolor sit amet, consectetur adipisicing..</Title>
                     <SubtitleWrapper>
-                        <Line src="./public/images/line.png"/>
+                        <Line src="./images/line.png"/>
                         <Subtitle>Lorem ipsum dolor.</Subtitle>
                     </SubtitleWrapper>
                     <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolor fugit

@@ -24,9 +24,9 @@ const Desc = styled.div`
 const Illustrations = () => {
     return (
         <>
-            <Canvas camera={{ position: [1, 2, 7] }}>
+            <Canvas camera={{ position: [3, 3, 3] }}>
                 <ambientLight intensity={1.5}/>
-                <directionalLight position={[17, 15, 9]}/>
+                <directionalLight position={[3, 2, 1]}/>
                 <Suspense fallback={null}>
                     <Illustration/>
                     <OrbitControls enableZoom={false} autoRotate />

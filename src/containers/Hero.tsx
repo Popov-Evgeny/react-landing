@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import {MeshDistortMaterial, OrbitControls, Sphere} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 
@@ -132,7 +132,7 @@ const Hero = () => {
                 <LeftSection>
                     <Title>Lorem ipsum dolor sit amet.</Title>
                     <SubtitleWrapper>
-                        <Line src="./public/images/line.png"/>
+                        <Line src="./images/line.png"/>
                         <Subtitle>Lorem ipsum dolor.</Subtitle>
                     </SubtitleWrapper>
                     <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, enim!</Desc>
@@ -152,7 +152,7 @@ const Hero = () => {
                             />
                         </Sphere>
                     </Canvas>
-                    <Img src="./public/images/moon.png"/>
+                    <Img src="./images/moon.png"/>
                 </RightSection>
             </Container>
         </Section>
