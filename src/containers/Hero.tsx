@@ -15,6 +15,9 @@ const Section = styled.div`
   @media only screen and (max-width: 1350px) {
     height: 120vh;
   }
+  @media only screen and (max-width: 650px) {
+    margin-bottom: 150px;
+  }
 `;
 
 const Container = styled.div`
@@ -53,7 +56,10 @@ const RightSection = styled.div`
 
   @media only screen and (max-width: 1350px) {
     flex: 1;
-    width: 100%;
+  }
+
+  @media only screen and (max-width: 650px) {
+    margin: 100px 0;
   }
 `;
 
@@ -84,13 +90,28 @@ const Img = styled.img`
   animation: animate 2s infinite ease alternate;
 
   @media only screen and (max-width: 1350px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 650px) {
     width: 300px;
     height: 300px;
   }
 
+  @media only screen and (max-width: 450px) {
+    width: 100px;
+    height: 100px;
+    top: -5px;
+  }
+  
+
   @keyframes animate {
     to {
       transform: translateY(20px);
+      @media only screen and (max-width: 450px) {
+        transform: translateY(10px);
+      }
     }
   }
 `;

@@ -9,13 +9,17 @@ import Illustrations from "../components/Illustrations";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   position: relative;
 
   @media only screen and (max-width: 1350px) {
     height: 120vh;
+  }
+
+  @media only screen and (max-width: 650px) {
+    margin-bottom: 150px;
   }
 `;
 
@@ -26,7 +30,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media only screen and (max-width: 1350px) {
-    height: 70vh;
+    height: 95vh;
     width: 100%;
     flex-direction: column-reverse;
     align-items: center;

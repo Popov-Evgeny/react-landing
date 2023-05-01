@@ -10,7 +10,7 @@ const Section = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 1350px) {
-    height: 70vh;
+    height: 95vh;
   }
 `;
 

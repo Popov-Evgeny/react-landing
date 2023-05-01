@@ -9,6 +9,9 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 650px) {
+    margin-bottom: 250px;
+  }
 `;
 
 const Container = styled.div`
@@ -32,6 +35,9 @@ const LeftSection = styled.div`
   flex: 1;
   @media only screen and (max-width: 1350px) {
     display: none;
+  }
+  @media only screen and (max-width: 650px) {
+    margin-top: 200px;
   }
 `;
 
