@@ -64,6 +64,12 @@ const ListItem = styled.li<any>`
     text-align: center;
   }
 
+  @media only screen and (max-width: 500px) {
+    ::after {
+      display: none;
+    }
+  }
+
   ::after {
     content: "${(props) => {
       return props.text;

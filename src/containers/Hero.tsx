@@ -13,10 +13,11 @@ const Section = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 1350px) {
-    height: 120vh;
+    height: 100vh;
   }
   @media only screen and (max-width: 650px) {
     margin-bottom: 150px;
+    height: 135vh;
   }
 `;
 
@@ -90,18 +91,13 @@ const Img = styled.img`
   animation: animate 2s infinite ease alternate;
 
   @media only screen and (max-width: 1350px) {
-    width: 100%;
-    height: auto;
-  }
-
-  @media only screen and (max-width: 650px) {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 
   @media only screen and (max-width: 450px) {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     top: -5px;
   }
   
@@ -160,7 +156,7 @@ const Hero = () => {
                     <Button>Learn more.</Button>
                 </LeftSection>
                 <RightSection>
-                    <Canvas>
+                    <Canvas className="canvas">
                         <ambientLight intensity={0.5}/>
                         <directionalLight position={[3, 2, 1]}/>
                         <OrbitControls enableZoom={false}/>

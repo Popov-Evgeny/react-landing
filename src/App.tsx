@@ -3,6 +3,7 @@ import Hero from "./containers/Hero";
 import Works from "./containers/Works";
 import Contacts from "./containers/Contacts";
 import About from "./containers/About";
+import './App.css';
 
 function App() {
 
